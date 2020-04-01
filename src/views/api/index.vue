@@ -65,6 +65,11 @@
                     <el-tag type="success" v-if="scope.row.method">{{ scope.row.method }}</el-tag>
                 </template>
             </el-table-column>
+            <el-table-column align="center" label="后端GRPC方法">
+                <template slot-scope="scope">
+                    <span>{{scope.row.grpcMethod}}</span>
+                </template>
+            </el-table-column>
             <el-table-column align="center" label="状态" width="100px">
                 <template slot-scope="scope">
                     <el-tag v-if="scope.row.status == 0" type="danger">禁用</el-tag>

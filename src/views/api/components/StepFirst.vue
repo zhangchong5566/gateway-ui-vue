@@ -65,13 +65,13 @@
         </el-tooltip>
       </el-form-item>
 
-      <el-form-item label="匹配优先级(Position)">
-        <el-input-number
-          v-model="tempItem.position"
-          :min="0"
-          :max="100"
-          label="匹配优先级"
-        />
+        <el-form-item label="后端GRPC方法(grpcMethod)">
+          <el-input
+            v-model.trim="tempItem.grpcMethod"
+            placeholder="当后端接口为GRPC协议时配置"
+            style="width: 450px"
+          />
+        </el-form-item>
 
         <el-button type="primary" size="mini" @click="dialogVisible = true">查看优先级排序</el-button>
         <el-tooltip class="item" effect="dark" placement="top-start">
